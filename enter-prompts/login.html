@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log in</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../styles/login-style.css">
+        <link rel="stylesheet" href="../styles/font.css">
+        <link rel="stylesheet" href="../styles/general.css">
+        <script src="../script/script.js"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    </head>
+    <body class="glass-frame">
+        <main>
+            <h1 class="title">Log in your account</h1>
+            <p class="note">If you don't have an account, please <a href="signup.html">register</a>.</p>
+            <form action="action_page.php" method="post">
+                <div class="form">
+                    <div class="field">
+                        <label for="uname" class="label"><b>Username:</b></label><br>
+                        <input type="text" placeholder="Enter Username" name="uname" required class="input-box" title="Fill in your username here"><br>
+                    </div>
+                    <div class="field">
+                        <label for="psw" class="label"><b>Password:</b></label><br>
+                        <input type="password" placeholder="Enter Password" name="psw" required class="input-box" id="InputPassword" title="Fill in your password here"><br>
+                        <div class="eye-icon-padding" id="eye-padding" onclick="PasswordToggle()">
+                            <box-icon name='show' class="eye-icon" id="Eye-icon-id"></box-icon>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Login</button>
+                    <hr>
+                    <div class="container">
+                        <label>
+                            <span class="btn btn-remb">
+                                <input type="checkbox" class="checkbox" checked>Remember me
+                            </span>
+                        </label>
+                        <button onclick="window.location.href = 'forgotpassword.html';" class="btn btn-forgot">I forgot my password</button><br>
+                    </div>
+                    <!--
+                    <div class="line-container">
+                        <div class="line"></div>
+                        <div class="inline-text">Or</div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="media-options">
+                        <a href="#" class="field google">
+                            <i class='bx bxl-google'></i>
+                        </a>
+                    </div>
+                    -->
+                    <hr>
+                    <button onclick="window.location.href = '../index.html';" class="btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../styles/signup-style.css">
+        <link rel="stylesheet" href="../styles/font.css">
+        <link rel="stylesheet" href="../styles/general.css">
+        <script src="../script/script.js"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    </head>
+    <body class="glass-frame">
+        <main>
+            <h1 class="title">
+                Create a new account
+            </h1>
+            <p class="note">If you already have an account, please <a href="login.html">log in</a>.</p>
+            <form action="#">
+                <div class="form">
+                    <div class="field">
+                        <label for="email" class="label"><b>Email:</b></label><br>
+                        <input type="email" placeholder="Enter Email" name="email" required class="input-box" title="Enter    your email here"><br>
+                    </div>
+                    <div class="field">
+                        <label for="uname" class="label"><b>Username:</b></label><br>
+                        <input type="text" placeholder="Enter Username" name="uname" required class="input-box" title="Enter your username here"><br>
+                    </div>
+                    <div class="field">
+                        <label for="psw" class="label"><b>New Password:</b></label><br>
+                        <input type="password" placeholder="Enter Password" name="psw" required class="input-box password"
+                         id="InputPassword" title="Enter your password here" oninput="CheckPswConditions()" onfocusin="ShowCheckPswConditionsPopup()" onfocusout="HideCheckPswConditionsPopup()">
+                        <div class="eye-icon-padding /bx-burst" onclick="PasswordToggle(), EyePaddingBurstAnimation()">
+                            <box-icon name='show' class="eye-icon" id="Eye-icon-id"></box-icon>
+                        </div>
+                    </div>
+                    <div class="popup-overlay arrow-left visibility-off" id="popup-overlay-id">
+                        <div class="popup-content">
+                            <p class="psw-conditions-heading">Your password must contain the following:</p>
+                            <ul class="bx-ul">
+                                <li class="condition-not-met condition-list" id="password-length-check">
+                                    <i class='bx-fw bx bx-x condition-not-met icon-bullet-point' id="password-length-check-display"></i>
+                                    Minimum <b>8 characters</b>, maximum <b>28 characters</b>
+                                </li>
+                                <li class="condition-not-met condition-list" id="password-cases-check">
+                                    <i class='bx-fw bx bx-x condition-not-met icon-bullet-point' id="password-cases-check-display"></i>
+                                    <b>Uppercase (capital)</b> and <b>lowercase letters</b>
+                                </li>
+                                <li class="condition-not-met condition-list" id="password-has-numbers-check">
+                                    <i class='bx-fw bx bx-x condition-not-met icon-bullet-point' id="password-has-numbers-check-display"></i>
+                                    A <b>number</b>
+                                </li>
+                                <li class="condition-not-met condition-list" id="password-no-special-chars-check">
+                                    <i class='bx-fw bx bx-x condition-not-met icon-bullet-point' id="password-no-special-chars-check-display"></i>
+                                    A <b>special character</b> such as: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
+                                </li>
+                                <!--bx bxs-check-square - true (box), bx bx-check - true (regular)
+                                    bx bxs-x-square - false (box), bx bx-x - false (regular)-->
+                            </ul>
+                            <p class="psw-conditions-heading text-centered">Password Overview</p>
+                            <i class="bx bx-x condition-not-met"></i>
+                        </div>
+                    </div>
+                    <!-- <div class="field">
+                        <label for="rep-psw" class="label"><b>Confirm Password:</b></label><br>
+                        <input type="password" placeholder="Confirm Password" name="rep-psw" required class="input-box" id="InputPassword" title="Confirm your password by entering it here">
+                        <i class='bx bx-hide eye-icon-2 eye-icon' id="Eye-icon-id" onclick="PasswordToggle()"></i><br>
+                    </div>
+                    -->
+                    <div class="field">
+                        <label for="date-birth" class="label"><b>Date of birth:</b></label><br>
+                        <input type="date" placeholder="Date of birth" required class="input-box" title="Choose your date of birth using a dropdown">
+                    </div>
+                    <div class="field">
+                        <label for="gender-container"><b>Gender:</b></label><br>
+                        <div class="gender-container">
+                            <div class="gender-group">
+                                <button type="button" id="MaleButton" class="gender-button male-button" title="Male" onclick="ChoseGender(1)">
+                                    <div class="gender-icon gender-male" id="MaleGender"></div>
+                                </button>
+                                <button type="button" id="FemaleButton" class="gender-button female-button" title="Female" onclick="ChoseGender(-1)">
+                                    <div class="gender-icon gender-female" id="FemaleGender"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Sign up</button>
+                    <hr>
+                    <button onclick="window.location.href = '../index.html';" class="btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    color: var(--clr-primary-dark);
+    border: 2px solid var(--clr-border-black);
+    width: 400px;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.note {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+hr {
+    border: 1px solid var(--clr-border-black);
+    border-radius: 10px;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--clr-primary-dark);
+}
+
+.container {
+    display: flex;
+}
+
+.btn {
+    border: 2px solid var(--clr-border-black);
+    background-color: transparent;
+    color: var(--clr-primary-dark);
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+
+.btn:hover, .input-box:hover {
+    background-color: var(--clr-light-grey-background);
+    transition: var(--transition-speed);
+    border-radius: 0px;
+}
+
+.input-box {
+    width: 358px;
+    border: 2px solid var(--clr-border-black);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    transition: var(--transition-speed);
+}
+
+.input-box:focus, .btn:focus {
+    background-color: var(--clr-light-grey-background);
+    outline: 0px;
+    border-radius: 0px;
+}
+
+.btn-submit {
+    width: 358px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-cancel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 358px;
+}
+
+.btn-forgot {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 174px;
+    font-size: 15px;
+    height: 38px;
+    margin-bottom: 10px;
+}
+
+.btn-remb {
+    width: 174px;
+    display: block;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 15px;
+    height: 38px;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    transform: translate(-50%, 15%);
+}
+
+.line-container {
+    display: flex;
+}
+
+.line {
+    position: relative;
+    height: 2px;
+    width: 160.055px;
+    background-color: var(--clr-border-black);
+    margin: 10px 0;
+}
+
+.inline-text {
+    color: var(--clr-border-black);
+    background-color: transparent;
+    padding: 0 10px;
+}
+
+.field {
+    position: relative;
+}

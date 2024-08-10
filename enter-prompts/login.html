@@ -19,13 +19,13 @@
             <form action="action_page.php" method="post">
                 <div class="form">
                     <div class="field">
-                        <label for="uname" class="label"><b>Username:</b></label><br>
-                        <input type="text" placeholder="Enter Username" name="uname" required class="input-box" title="Fill in your username here"><br>
+                        <input type="text" placeholder=" " name="uname" required class="input-box" title="Fill in your username here"><br>
+                        <label for="uname" class="input-label">Username or Email</label><br>
                     </div>
                     <div class="field">
-                        <label for="psw" class="label"><b>Password:</b></label><br>
-                        <input type="password" placeholder="Enter Password" name="psw" required class="input-box" id="InputPassword" title="Fill in your password here"><br>
-                        <div class="eye-icon-padding" id="eye-padding" onclick="PasswordToggle()">
+                        <input type="password" placeholder=" " name="psw" required class="input-box" id="InputPassword" title="Fill in your password here"><br>
+                        <label for="psw" class="input-label">Password</label><br>
+                        <div class="eye-icon-padding" id="eye-padding">
                             <box-icon name='show' class="eye-icon" id="Eye-icon-id"></box-icon>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                 <input type="checkbox" class="checkbox" checked>Remember me
                             </span>
                         </label>
-                        <button onclick="window.location.href = 'forgotpassword.html';" class="btn btn-forgot">I forgot my password</button><br>
+                        <button type="button" class="btn btn-forgot">I forgot my password</button><br>
                     </div>
                     <!--
                     <div class="line-container">
@@ -52,7 +52,7 @@
                     </div>
                     -->
                     <hr>
-                    <button onclick="window.location.href = '../index.html';" class="btn btn-cancel">Cancel</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
                 </div>
             </form>
         </main>

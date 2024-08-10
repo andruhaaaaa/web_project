@@ -1,13 +1,28 @@
 :root {
+    /** Colors */
     --clr-primary-dark: #333;
     --clr-border-black: #1a1a1a;
     --clr-light-grey-background: #f7f7f7;
-    --clr-transparent-grey-background: #f7f7f77c;
+    --clr-transparent-grey-background: #ffffff7c;
     --clr-link-active: #551A8B;
     --clr-link-unactive: #2F56B0;
     --clr-correct-green: #11a611;
+    --clr-correct-light-green: #4eda4e;
+    --clr-partially-correct-light-orange: #ebe052;
     --clr-incorrect-red: #a61111;
+    --clr-incorrect-light-red: #da4e4e;
     --transition-speed: 0.5s;
+    /** Font sizes */
+
+    /** Margin sizes */
+    --m-xxs: .25rem;
+    --m-xs: .5rem;
+    --ma-s: .75rem;
+    --m-m: 1rem;
+    --m-l: 1.25rem;
+    --m-xl: 1.75rem;
+    --m-xxl: 2.5rem;
+    --m-xxxl: 3.75rem;
 }
 
 @keyframes transitionIn {
@@ -86,8 +101,52 @@ a:hover::after {
     right: 0;
 }
 
+input:focus {
+    outline: none;
+}
+
 .form {
     position: relative;
+}
+
+.btn {
+    border: 2px solid var(--clr-border-black);
+    background-color: transparent;
+    color: var(--clr-primary-dark);
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+
+.btn:hover, .input-box:hover, .gender-button:hover {
+    background-color: var(--clr-light-grey-background);
+    transition: var(--transition-speed);
+    border-radius: 0px;
+}
+
+.input-box {
+    width: 358px;
+    border: 2px solid var(--clr-border-black);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    transition: var(--transition-speed);
+}
+
+.input-box:focus, .btn:focus {
+    background-color: var(--clr-light-grey-background);
+    outline: 0px;
+    border-radius: 0px;
 }
 
 .eye-icon {
@@ -106,7 +165,7 @@ a:hover::after {
     height: 22px;
     width: 22px;
     visibility: visible;
-    top: 32px;
+    top: 8px;
     right: 13px;
     cursor: pointer;
     border-radius: 50%;
@@ -115,7 +174,7 @@ a:hover::after {
 }
 
 .eye-icon-padding:hover {
-    background-color: var(--clr-light-grey-background);
+    background-color: var(--clr-transparent-grey-background);
     transition: var(--transition-speed);
 }
 
@@ -130,4 +189,64 @@ a:hover::after {
 
 .text-centered {
     text-align: center;
+}
+
+.condition-not-met {
+    color: var(--clr-incorrect-red);
+}
+
+.condition-is-met {
+    color: var(--clr-correct-green);
+}
+
+.visibility-on {
+    display: block;
+}
+
+.visibility-off {
+    display: none;
+}
+
+.icon-bullet-point {
+    top: 2.25px;
+}
+
+.input-condition-is-met, .input-condition-is-met:hover, .input-condition-is-met:focus {
+    background-color: var(--clr-correct-light-green);
+}
+
+.input-condition-not-met, .input-condition-not-met:hover, .input-condition-not-met:focus {
+    background-color: var(--clr-incorrect-light-red);
+}
+
+.input-condition-partially-met, .input-condition-partially-met:hover, .input-condition-partially-met:focus {
+    background-color: var(--clr-partially-correct-light-orange);
+}
+
+.input-label {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    color: #0e0e0ead;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+    font-size: 1rem;
+    user-select: none;
+}
+
+input:focus ~ label,
+input:valid ~ label, .input-label-out {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    color: var(--clr-light-grey-background);
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    font-size: 0.6rem;
+    user-select: none;
+    z-index: 1000;
+    background-color: var(--clr-border-black);
+    border: 1px solid var(--clr-border-black);
+    padding: 0px 5px;
+    border-radius: 5px;
 }

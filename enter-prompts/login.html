@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../styles/login-style.css">
         <link rel="stylesheet" href="../styles/font.css">
         <link rel="stylesheet" href="../styles/general.css">
-        <script src="../script/script.js"></script>
+        <script src="../scripts/login-page-script.js"></script>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -19,14 +19,14 @@
             <form action="action_page.php" method="post">
                 <div class="form">
                     <div class="field">
-                        <input type="text" placeholder=" " name="uname" required class="input-box" title="Fill in your username here"><br>
-                        <label for="uname" class="input-label">Username or Email</label><br>
+                        <input type="text" placeholder=" " name="uname" required class="input-box" title="Fill in your username here">
+                        <label for="uname" class="input-label">Username or Email</label>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder=" " name="psw" required class="input-box" id="InputPassword" title="Fill in your password here"><br>
-                        <label for="psw" class="input-label">Password</label><br>
+                        <input type="password" placeholder=" " name="psw" required class="input-box" id="InputPassword" title="Fill in your password here">
+                        <label for="psw" class="input-label">Password</label>
                         <div class="eye-icon-padding" id="eye-padding">
-                            <box-icon name='show' class="eye-icon" id="Eye-icon-id"></box-icon>
+                            <box-icon name='show' class="eye-icon" id="eye-icon-id"></box-icon>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-submit">Login</button>
@@ -37,7 +37,7 @@
                                 <input type="checkbox" class="checkbox" checked>Remember me
                             </span>
                         </label>
-                        <button type="button" class="btn btn-forgot">I forgot my password</button><br>
+                        <button type="button" class="btn btn-forgot">I forgot my password</button>
                     </div>
                     <!--
                     <div class="line-container">

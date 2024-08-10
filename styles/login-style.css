@@ -40,6 +40,7 @@ hr {
 .btn-submit {
     width: 358px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .btn-cancel {
@@ -90,9 +91,4 @@ hr {
     color: var(--clr-border-black);
     background-color: transparent;
     padding: 0 10px;
-}
-
-.field {
-    position: relative;
-    margin-bottom: -14px;
 }

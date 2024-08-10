@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/signup-style.css">
     <link rel="stylesheet" href="../styles/font.css">
     <link rel="stylesheet" href="../styles/general.css">
-    <script src="../script/script.js" defer></script>
+    <script src="../scripts/signup-page-script.js" defer></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous" defer></script>
@@ -19,25 +19,25 @@
         <form action="submit_signup_form.###" method="post">
             <div class="form" spellcheck="false">
                 <div class="field">
-                    <input type="email" placeholder=" " name="email" id="InputEmail" required class="input-box" title="Enter your email here"><br>
+                    <input type="email" placeholder=" " name="email" id="InputEmail" required class="input-box" title="Enter your email here">
                     <label for="email" class="input-label">Email*</label>
                 </div>
                 <div class="field">
-                    <input type="text" placeholder=" " name="uname" id="InputUname" required class="input-box" title="Enter your username here"><br>
+                    <input type="text" placeholder=" " name="uname" id="InputUname" required class="input-box" title="Enter your username here">
                     <label for="uname" class="input-label">Username*</label>
                 </div>
                 
                 <div class="field">
                     <input type="password" placeholder=" " name="psw" required class="input-box password" id="InputPassword" title="Enter your password here">
-                    <div class="eye-icon-padding" id="Eye-icon-id">
-                        <box-icon name='show' class="eye-icon"></box-icon>
+                    <div class="eye-icon-padding" id="eye-padding">
+                        <box-icon name='show' id="eye-icon-id" class="eye-icon"></box-icon>
                     </div>
-                    <label for="psw" class="input-label" id="input-label-psw">New Password*</label><br>
+                    <label for="psw" class="input-label" id="input-label-psw">New Password*</label>
                 </div>
                 
                 <div class="field">
                     <input type="date" placeholder="Date of birth" required class="input-box" title="Choose your date of birth using a dropdown">
-                    <label for="date-birth" class="input-label-out">Date of birth*</label><br>
+                    <label for="date-birth" class="input-label-out">Date of birth*</label>
                 </div>
                 <div class="gender-container">
                     <div class="gender-group">

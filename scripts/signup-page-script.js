@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
   const inputUname = document.getElementById("InputUname");
   const inputPassword = document.getElementById("InputPassword");
-  const eyeIcon = document.querySelector(".eye-icon-padding");
+  const eyeIcon = document.getElementById("eye-padding");
   const maleButton = document.getElementById("MaleButton");
   const femaleButton = document.getElementById("FemaleButton");
   const cancelButton = document.querySelector(".btn-cancel");
-  const forgotpswButton = document.querySelector(".btn-forgot");
 
   // Username field event listeners
   inputUname.addEventListener("focusin", ShowUnameConditionsPopup);
@@ -27,10 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // Link buttons event listeners
   cancelButton.addEventListener("click", function() {
       window.location.href = '../index.html';
-  });
-
-  forgotpswButton.addEventListener("click", function() {
-      window.location.href = '../enter-prompts/forgotpassword.html';
   });
 });
 
@@ -242,9 +237,9 @@ function ChoseGender(str) {
 var pass_visibility_state = 1;
 
 function PasswordToggle() {
-pass_visibility_state++;
-var pswtoggle = document.getElementById("InputPassword");
-var eyeicon = document.getElementById("Eye-icon-id");
+  pass_visibility_state++;
+  var pswtoggle = document.getElementById("InputPassword");
+  var eyeicon = document.getElementById("eye-icon-id");
 
   if(pass_visibility_state % 2 == 0) {
       pswtoggle.type = 'text';
@@ -258,16 +253,6 @@ var eyeicon = document.getElementById("Eye-icon-id");
 function EyePaddingBurstAnimation() {
   var eyeiconpadding = document.getElementById("eye-padding")
 };
-
-//function InputLabelAnimationIn() {
-//  var InputLabel = document.querySelector('label.input-label');
-//  InputLabel.classList.add("input-label-out");
-//};
-//
-//function InputLabelAnimationOut() {
-//  var InputLabel = document.getElementById("str");
-//  InputLabel.classList.add("input-label-out");
-//};
 
 // todo: #1 CheckPswConditionsPopup - minimal width, special symbols, numbers, register check. Make lines green and show a green checkmark when true, red and red cross when false, 
 //       #2 EyePaddingBurstAnimation - make a bx-burst animation play once upon click

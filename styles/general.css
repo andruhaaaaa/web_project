@@ -109,6 +109,12 @@ input:focus {
     position: relative;
 }
 
+.field {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
 .btn {
     border: 2px solid var(--clr-border-black);
     background-color: transparent;
@@ -124,7 +130,7 @@ input:focus {
     transition: var(--transition-speed);
 }
 
-.btn:hover, .input-box:hover, .gender-button:hover {
+.btn:hover, .input-box:hover {
     background-color: var(--clr-light-grey-background);
     transition: var(--transition-speed);
     border-radius: 0px;
